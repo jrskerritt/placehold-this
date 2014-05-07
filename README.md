@@ -1,9 +1,9 @@
-PlaceholderFactory
-==================
+placehold-this
+==============
 
 About
 -----
-PlaceholderFactory is a [Sinatra](https://github.com/sinatra/sinatra) application that serves up custom placeholder images.
+placehold-this is a [Sinatra](https://github.com/sinatra/sinatra) application that serves up custom placeholder images.
 
 
 Installation
