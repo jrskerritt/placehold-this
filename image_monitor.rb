@@ -44,7 +44,7 @@ class ImageMonitor
 
   private
   def get_family_name(path)
-    return path =~ %r{^images/[^/]+\..{2,4}$} ? "" : %r{images/([^/]+)/}.match(path).captures[0]
+    return path =~ %r{images/[^/]+\..{2,4}$} ? "" : %r{images/([^/]+)/}.match(path).captures[0]
   end
 
   def get_file_name(path)

@@ -1,7 +1,11 @@
 require 'sinatra'
+require 'sinatra/config_file'
 require 'guard'
 require './image_monitor'
 require './image_selector'
+
+config_file 'config.yml'
+set :port, settings.port
 
 def get_image(family_name, width, height)
   Guard.run_all
@@ -12,6 +16,7 @@ def get_image(family_name, width, height)
   unless image then halt 404 end
   send_file(image.crop(width, height).path, :disposition => "inline")
 end
+
 
 # Display an image from the default family (images in the root images folder)
 get '/:width/?:height?' do
