@@ -21,6 +21,8 @@ Start the application
 
 Usage
 -----
-Place your images in the `images` directory. You can then make requests to `http://localhost:4567/{width}/{height}` supplying the desired width and height. The application determines which image best matches the requested dimensions, giving priority to preserving orientation and cropping to fit.
+Place your images in the `images` directory. You can then make requests to `http://localhost:{port}/{width}/{height}` supplying the desired width and height. The application determines which image best matches the requested dimensions, giving priority to preserving orientation and cropping to fit.
 
 You can also group images into families by creating directories in the images directory. For example, if there is a directory named `penguin` inside of `images` that contains images of penguins, you can make a request for a 400x300 penguin image by making a request to `http://localhost:4567/penguin/400/300`.
+
+The port that the application runs on is configurable inside of `config.yml`.
