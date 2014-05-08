@@ -10,7 +10,11 @@ class Family
   end
 
   def add_image(name, path, width, height)
-    @images.push(Image.new(name, path, width, height)).sort! { |a,b| a <=> b }
+    add_image_obj(Image.new(name, path, width, height))
+  end
+
+  def add_image_obj(image)
+    @images.push(image).sort! { |a,b| a <=> b }
   end
 
   def remove_image(name)

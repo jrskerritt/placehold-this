@@ -15,6 +15,7 @@ module ::Guard
 
     def run_all
       paths = Watcher.match_files(self, Dir.glob('{,**/}*{,.*}').uniq)
+      puts paths
       additions = paths - @monitor.image_paths
       removals = @monitor.image_paths - paths
       @monitor.image_paths = paths
