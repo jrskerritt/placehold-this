@@ -18,10 +18,6 @@ class Image
     File.extname(@name)
   end
 
-  def orientation
-    @orientation ||= Image.get_orientation(@width, @height)
-  end
-
   def ratio
     @ratio ||= @width.to_f / @height
   end
@@ -46,16 +42,6 @@ class Image
       ratio <=> other.ratio
     else
       1
-    end
-  end
-
-  def self.get_orientation(width, height)
-    if width > height
-      :landscape
-    elsif width < height
-      :portrait
-    else
-      :square
     end
   end
 end

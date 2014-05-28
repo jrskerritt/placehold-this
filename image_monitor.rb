@@ -23,14 +23,14 @@ class ImageMonitor
 
     # Always add to the global family. If the path is the root images directory,
     # don't add to the global family twice.
-    @families[@global].add_image_obj(image_obj)
+    @families[@global].add_image(image_obj)
     if @families[@global].name == family_name then return end
 
     # Otherwise add to the other non-global family too
     unless @families.has_key?(family_name)
       @families[family_name] = Family.new(family_name)
     end
-    @families[family_name].add_image_obj(image_obj)
+    @families[family_name].add_image(image_obj)
   end
 
   def remove_image(path)
